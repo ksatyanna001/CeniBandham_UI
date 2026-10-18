@@ -253,10 +253,10 @@ function Register() {
     <main className="app-shell">
       <Container fluid="lg">
         <header className="topbar">
-          <a className="brand" href="#home" aria-label="CeniBandham home">
+          <Link className="brand" to="/" aria-label="CeniBandham home">
             <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
             <span>CeniBandham</span>
-          </a>
+          </Link>
           <p className="topbar-note mb-0">A community for the stories we tell</p>
           <Link className="signin-link" to="/login">
             <span>Already a member? <strong>Sign in</strong></span>

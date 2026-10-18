@@ -7,14 +7,14 @@ import App from './App.jsx'
 afterEach(cleanup)
 
 describe('App routing', () => {
-  it('redirects the home route to registration', () => {
+  it('renders the homepage at the home route', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <App />
       </MemoryRouter>,
     )
 
-    expect(screen.getByRole('heading', { name: 'Create your account' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Find your next/i })).toBeInTheDocument()
   })
 
   it('renders registration directly at /register', () => {
@@ -61,13 +61,13 @@ describe('App routing', () => {
     expect(await screen.findByRole('heading', { name: 'Sign in to your account' })).toBeInTheDocument()
   })
 
-  it('redirects unknown routes to registration', () => {
+  it('redirects unknown routes to the homepage', () => {
     render(
       <MemoryRouter initialEntries={['/unknown']}>
         <App />
       </MemoryRouter>,
     )
 
-    expect(screen.getByRole('heading', { name: 'Create your account' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Find your next/i })).toBeInTheDocument()
   })
 })

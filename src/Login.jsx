@@ -41,7 +41,7 @@ function Login() {
     <main className="app-shell login-page">
       <Container fluid="lg">
         <header className="topbar">
-          <Link className="brand" to="/register" aria-label="CeniBandham home">
+          <Link className="brand" to="/" aria-label="CeniBandham home">
             <span className="brand-mark" aria-hidden="true"><span /><span /><span /></span>
             <span>CeniBandham</span>
           </Link>
